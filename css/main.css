@@ -118,6 +118,7 @@ body {
   border-bottom: .1em solid white;
   padding-top: 1em;
   padding-bottom: 1em;
+  flex-flow: row nowrap;
 }
 
 .div-1, .div-2, .div-3 {
