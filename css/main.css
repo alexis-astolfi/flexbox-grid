@@ -99,6 +99,7 @@ textarea {
 html {
   background-color:rgb(44, 44, 44);
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -106,32 +107,85 @@ body {
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
+  color: white;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-weight: 700;
-  border-top: .1em solid white;
-  border-bottom: .1em solid white;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  flex-flow: row nowrap;
+
+  main, header, footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+header, footer {
+    height: 80px;
+    width: 100%;
+}
+
+main {
+    height: 280px;
+    width: 100%;
+}
+
+h1 {
+    /*display: flex;
+    justify-content: flex-start;
+    align-items: center;*/
+    font-size: 3em;
+    font-family: "Abril Fatface", serif;
+    font-weight: lighter;
+}
+
+h3 {
+    /*display: flex;
+    justify-content: flex-start;
+    align-items: center;*/
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+span {
+    font-family: "Abril Fatface", serif;
+    font-weight: lighter;
+    color: pink;
+}
+
+.fas {
+    margin: 0 0.5em;
+}
+
+.flex-container {
+    /*add display:flex and set justify-content to space-between*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*font-weight: 700;*/
+    flex-flow: row wrap;
+  }
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-top: .1em solid white;
+    border-bottom: .1em solid white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   line-height: 1.15em;
   font-size: 1em;
   font-weight: 400;
   background-color: rgb(44, 44, 44);
   height: 275px;
-  justify-content: center;
-  align-items: center;
   width: 30%;
   padding: 0 1.5em;
 }
@@ -139,6 +193,26 @@ body {
 .div-2 {
     border-left: .05em dotted pink;
     border-right: .05em dotted pink;
+}
+
+p footer {
+    /*display: flex;
+    justify-content: flex-start;
+    align-items: center;*/
+    color: white;
+    font-size: 1.25em;
+}
+
+.fab, .far {
+    margin: 0 0.25em;
+}
+
+a {
+    color: white;
+}
+
+a:visited, a:hover {
+    color: pink;
 }
 
 
@@ -222,7 +296,8 @@ body {
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
-   ========================================================================== */
+   ========================================================================== *
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
